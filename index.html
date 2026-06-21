@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>網頁計算機</title>
+  <style>
+    /* 頁面基本排版 */
+    body {
+      font-family: sans-serif;
+      max-width: 400px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    /* 輸入框群組 */
+    .input-group {
+      margin-bottom: 1rem;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: bold;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    /* 四顆運算按鈕排列 */
+    .buttons {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .buttons button {
+      flex: 1;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* 結果顯示區塊 */
+    #result {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-height: 2rem;
+      font-size: 1.1rem;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>網頁計算機</h1>
+
+  <!-- 第一個數字輸入框（per UI-01） -->
+  <div class="input-group">
+    <label for="num1">第一個數字</label>
+    <input type="number" id="num1" placeholder="第一個數字">
+  </div>
+
+  <!-- 第二個數字輸入框（per UI-01） -->
+  <div class="input-group">
+    <label for="num2">第二個數字</label>
+    <input type="number" id="num2" placeholder="第二個數字">
+  </div>
+
+  <!-- 四顆運算按鈕（per UI-02）：加／減／乘／除 -->
+  <div class="buttons">
+    <button onclick="calculate('add')">加</button>
+    <button onclick="calculate('subtract')">減</button>
+    <button onclick="calculate('multiply')">乘</button>
+    <button onclick="calculate('divide')">除</button>
+  </div>
+
+  <!-- 結果顯示區塊（per UI-03） -->
+  <div id="result"></div>
+
+  <script>
+    /**
+     * 執行四則運算並將結果顯示於 id=result 元素。
+     *
+     * 安全規則：
+     *   - 結果賦值一律使用 textContent（禁止 DOM 注入介面，防止 XSS）
+     *   - 計算邏輯使用原生算術運算子（禁止動態執行函式）
+     *
+     * @param {string} op - 運算類型：'add' | 'subtract' | 'multiply' | 'divide'
+     */
+    function calculate(op) {
+      var resultEl = document.getElementById('result');
+
+      // 步驟 1：讀取輸入框的值，以 parseFloat 轉換為數值
+      var val1 = document.getElementById('num1').value;
+      var val2 = document.getElementById('num2').value;
+      var a = parseFloat(val1);
+      var b = parseFloat(val2);
+
+      // 步驟 2：驗證輸入（空白或非數字 → 顯示錯誤訊息並結束）（per ERR-02）
+      // 同時檢查 isNaN 與 trim() 空字串，防止 Infinity / NaN 字串進入結果區塊
+      if (isNaN(a) || val1.trim() === '' || isNaN(b) || val2.trim() === '') {
+        resultEl.textContent = '錯誤：請輸入有效的數字';
+        return;
+      }
+
+      // 步驟 3：除以零防護（per ERR-01）
+      if (op === 'divide' && b === 0) {
+        resultEl.textContent = '錯誤：除數不可為零';
+        return;
+      }
+
+      // 步驟 4：依 op 執行對應的原生算術運算（per CALC-01~04）
+      var answer;
+      if (op === 'add') {
+        answer = a + b;           // 加法（CALC-01）
+      } else if (op === 'subtract') {
+        answer = a - b;           // 減法（CALC-02）
+      } else if (op === 'multiply') {
+        answer = a * b;           // 乘法（CALC-03）
+      } else if (op === 'divide') {
+        answer = a / b;           // 除法（CALC-04）
+      }
+
+      // 步驟 5：將結果寫入結果區塊（使用 textContent，禁止 innerHTML）
+      resultEl.textContent = answer;
+    }
+  </script>
+</body>
+</html>
