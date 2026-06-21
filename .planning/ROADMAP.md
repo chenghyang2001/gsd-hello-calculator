@@ -13,7 +13,7 @@
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Working Calculator** - 在瀏覽器開啟 index.html，輸入兩個數字、按下四則運算按鈕，看到正確結果；無效輸入有可理解的提示
+- [x] **Phase 1: Working Calculator** - 在瀏覽器開啟 index.html，輸入兩個數字、按下四則運算按鈕，看到正確結果；無效輸入有可理解的提示 (completed 2026-06-21)
 
 ## Phase Details
 
@@ -34,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 
-- [ ] 01-01-PLAN.md — 建立完整計算機 index.html（Walking Skeleton：UI + 四則運算 + 錯誤處理）
+- [x] 01-01-PLAN.md — 建立完整計算機 index.html（Walking Skeleton：UI + 四則運算 + 錯誤處理）
 
 ## Progress
 
@@ -43,4 +43,4 @@ Phases execute in numeric order: 1
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Working Calculator | 0/1 | Not started | - |
+| 1. Working Calculator | 1/1 | Complete   | 2026-06-21 |

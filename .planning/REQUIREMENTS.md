@@ -9,21 +9,21 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### 介面 (UI)
 
-- [ ] **UI-01**: 頁面有兩個數字輸入框，使用者各輸入一個數字
-- [ ] **UI-02**: 頁面有「加」「減」「乘」「除」四顆按鈕
-- [ ] **UI-03**: 頁面有獨立的結果顯示區塊
+- [x] **UI-01**: 頁面有兩個數字輸入框，使用者各輸入一個數字
+- [x] **UI-02**: 頁面有「加」「減」「乘」「除」四顆按鈕
+- [x] **UI-03**: 頁面有獨立的結果顯示區塊
 
 ### 運算 (CALC)
 
-- [ ] **CALC-01**: 按「加」顯示兩數之和
-- [ ] **CALC-02**: 按「減」顯示兩數之差
-- [ ] **CALC-03**: 按「乘」顯示兩數之積
-- [ ] **CALC-04**: 按「除」顯示兩數之商
+- [x] **CALC-01**: 按「加」顯示兩數之和
+- [x] **CALC-02**: 按「減」顯示兩數之差
+- [x] **CALC-03**: 按「乘」顯示兩數之積
+- [x] **CALC-04**: 按「除」顯示兩數之商
 
 ### 錯誤處理 (ERR)
 
-- [ ] **ERR-01**: 除以零時顯示可理解的提示，頁面不壞掉
-- [ ] **ERR-02**: 輸入非數字或空白時顯示可理解的提示，頁面不壞掉
+- [x] **ERR-01**: 除以零時顯示可理解的提示，頁面不壞掉
+- [x] **ERR-02**: 輸入非數字或空白時顯示可理解的提示，頁面不壞掉
 
 ## v2 Requirements
 
@@ -48,15 +48,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| UI-01 | Phase 1 | Pending |
-| UI-02 | Phase 1 | Pending |
-| UI-03 | Phase 1 | Pending |
-| CALC-01 | Phase 1 | Pending |
-| CALC-02 | Phase 1 | Pending |
-| CALC-03 | Phase 1 | Pending |
-| CALC-04 | Phase 1 | Pending |
-| ERR-01 | Phase 1 | Pending |
-| ERR-02 | Phase 1 | Pending |
+| UI-01 | Phase 1 | Complete |
+| UI-02 | Phase 1 | Complete |
+| UI-03 | Phase 1 | Complete |
+| CALC-01 | Phase 1 | Complete |
+| CALC-02 | Phase 1 | Complete |
+| CALC-03 | Phase 1 | Complete |
+| CALC-04 | Phase 1 | Complete |
+| ERR-01 | Phase 1 | Complete |
+| ERR-02 | Phase 1 | Complete |
 
 **Coverage:**
 
