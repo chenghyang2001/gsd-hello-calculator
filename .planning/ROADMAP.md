@@ -29,8 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. 使用者在兩個輸入框各填入數字後，點擊任一運算按鈕，結果區塊顯示正確的計算答案
   3. 使用者在第二個輸入框填入 0 並按「除」，結果區塊顯示可理解的除以零提示訊息，頁面繼續正常運作
   4. 使用者在任一輸入框留白或輸入非數字並按下任一按鈕，結果區塊顯示可理解的錯誤提示訊息，頁面繼續正常運作
-**Plans**: TBD
+**Plans**: 1 plan
 **UI hint**: yes
+
+Plans:
+
+- [ ] 01-01-PLAN.md — 建立完整計算機 index.html（Walking Skeleton：UI + 四則運算 + 錯誤處理）
 
 ## Progress
 
@@ -39,4 +43,4 @@ Phases execute in numeric order: 1
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Working Calculator | 0/TBD | Not started | - |
+| 1. Working Calculator | 0/1 | Not started | - |
